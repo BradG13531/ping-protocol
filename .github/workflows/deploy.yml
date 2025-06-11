@@ -9,11 +9,11 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - name: Generate docs
-        run: |
-          pip install "jinja2>=2.10" mkdocs-material
-          sudo gem install html-proofer
-          tools/populate-docs.sh
+      # - name: Generate docs
+      #   run: |
+      #     pip install "jinja2>=2.10" mkdocs-material
+      #     sudo gem install html-proofer
+      #     tools/populate-docs.sh
 
       - name: Deploy docs
         if: github.ref == 'refs/heads/master'
